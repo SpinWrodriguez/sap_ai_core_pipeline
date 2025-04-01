@@ -2,6 +2,7 @@ apiVersion: ai.sap.com/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: spinifex-embedding-pipeline
+  type: custom                   # ✅ Required for Launchpad sync
 spec:
   entrypoint: main
   templates:
