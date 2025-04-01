@@ -2,10 +2,17 @@ apiVersion: ai.sap.com/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: spinifex-embedding-pipeline
-  type: custom
+  annotations:
+    scenarios.ai.sap.com/name: "Embeddings"
+    scenarios.ai.sap.com/description: "Embedding pipeline"
+    executables.ai.sap.com/name: "Embedding Executable"
+    executables.ai.sap.com/description: "Calls SAP embedding model"
+  labels:
+    scenarios.ai.sap.com/id: "spinifex"
+    ai.sap.com/version: "1.0"
 spec:
   imagePullSecrets:
-    - name: spinifexdr # your docker registry secret
+    - name: spinifexdr
   entrypoint: main
   templates:
     - name: main
