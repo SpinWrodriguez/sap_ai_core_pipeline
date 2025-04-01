@@ -20,7 +20,8 @@ spec:
 
   - name: greeter
     container:
-      image: docker.io/python:latest
+        image: docker.io/wrodrigueze/spinifexdr:latest
+        command: ["python", "embedding_caller.py"]
       command:
         - python3
         - '-c'
