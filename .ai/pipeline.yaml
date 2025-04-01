@@ -15,14 +15,14 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: sap-secrets
-                key: client_id
+                key: sb-dd2a68f5-49ce-4e73-ba3b-26e6bcfe537b!b122111|aicore!b540
           - name: SAP_CLIENT_SECRET
             valueFrom:
               secretKeyRef:
                 name: sap-secrets
-                key: client_secret
+                key: 5e3f0e54-7a29-46cb-bb04-87ac109c51fa$zcwo9a6Z34bGCdpP9RSeLTX-Cx7q0BaZNjRBmAwuyt8=
           - name: SAP_AUTH_URL
             valueFrom:
               secretKeyRef:
                 name: sap-secrets
-                key: auth_url
+                key: https://k1hz6cyng7289g98.authentication.eu10.hana.ondemand.com/oauth/token
