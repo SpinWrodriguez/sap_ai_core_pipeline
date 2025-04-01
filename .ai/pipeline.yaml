@@ -4,11 +4,13 @@ metadata:
   name: spinifex-embedding-pipeline
   type: custom
 spec:
+  imagePullSecrets:
+    - name: spinifexdr # your docker registry secret
   entrypoint: main
   templates:
     - name: main
       container:
-        image: wrodrigueze/spinifexdr:latest
+        image: docker.io/wrodrigueze/spinifexdr:latest
         command: ["python", "embedding_caller.py"]
         env:
           - name: SAP_CLIENT_ID
