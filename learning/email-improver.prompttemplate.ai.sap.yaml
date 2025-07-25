@@ -1,0 +1,16 @@
+name: email-improver
+version: 0.0.1
+scenario: email
+spec:
+  template:
+    - role: "system"
+      content: "You are an assistant that improves email tone and professionalism."
+    - role: "user"
+      content: "{{ ?raw_email }}"
+  defaults:
+    raw_email: "i need u to send me the report by monday or else."
+  additional_fields:
+    modelParams:
+      temperature: 0.7
+      max_tokens: 200
+    modelGroup: chat
