@@ -1,6 +1,7 @@
 type: orchestration
 name: email-reword
 version: 1.0.0
+scenario: orchestration
 spec:
   modules:
     llm_module_config:
