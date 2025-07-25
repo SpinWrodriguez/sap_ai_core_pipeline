@@ -1,3 +1,4 @@
+type: orchestration
 name: email-reword
 version: 1.0.0
 spec:
